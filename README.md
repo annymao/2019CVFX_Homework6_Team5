@@ -19,6 +19,7 @@ ORB-SLAM2 能夠提取圖片的特徵並做 pose estimation。我們對提供的
 
 ## 威力導演
 <a href="https://youtu.be/dsKpcQfdGlA" target="_blank"><img src="./Images/power.png" alt="Power" width="480" height="360" border="10"/></a>
+<br>
 利用威力導演中的 track motion 的功能，與 ORB-SLAM2 不同的是，他並非直接去算每個 frame，得到所有的 pose estimation 以及 local map，而是只對於某一部份的追蹤。所以我們只需要框出我們想要 track 的部分，接下來他就會對框選的部分進行 tracking。追蹤結束後他會算出選取地方移動的軌跡，此時我們就可以在上面加上想要插入的圖片、影片、文字以及特效。
 <br>
 雖然使用威力導演去做比用 ORB-SLAM2 來得容易許多，並且計算速度上也較快，但是結果上也較不準確。由影片中我們可以看出，插入的物件都會有一些浮動的感覺。並且當我們在追蹤的時候，如果追蹤的物體消失在畫面中，那追蹤的方框不會自動隱沒的影片外，而是會被畫面的邊邊推著走，導致軌跡錯誤。因此還需要人工去調整追蹤的位置。
@@ -27,11 +28,12 @@ ORB-SLAM2 能夠提取圖片的特徵並做 pose estimation。我們對提供的
 
 ### Insert 3D object by Cinema 4D Lite 
 <a href="https://youtu.be/5OtnqrWqJ1w" target="_blank"><img src="./Images/AE-OBJ.png" alt="Power" width="480" height="360" border="10"/></a>
+<br>
 首先利用 camera tracker 得到追蹤點，然後選取我們想要加上東西的平面後創建一個 solid 作為等一下要放 3D 物件的標記。<br>
 接下來將我們的檔案 export 成一個 C4d 檔，然後開啟一個新的 C4d 檔。我們將物件的 C4d 檔與原本的 tracking C4d 檔 merge 在一起，並把物件放到我們創建的 solid 的 hierachy 中，隱藏 solid 後存檔就可以了。最後只要將這個 C4d import 到我們的 ＡE 專案裝就大功告成了！
 <p float="left">
-    <img src="./Images/step1.png" alt="Power" width="480" height="360" border="10"/>
-    <img src="./Images/step2.png" alt="Power" width="480" height="360" border="10"/>
-    <img src="./Images/step3.png" alt="Power" width="480" height="360" border="10"/>
-    <img src="./Images/step4.png" alt="Power" width="480" height="360" border="10"/>
+    <img src="./Images/step1.png" alt="Power" width="360" height="270" border="10"/>
+    <img src="./Images/step2.png" alt="Power" width="360" height="270" border="10"/>
+    <img src="./Images/step3.png" alt="Power" width="360" height="270" border="10"/>
+    <img src="./Images/step4.png" alt="Power" width="360" height="270" border="10"/>
 </p>
