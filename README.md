@@ -26,6 +26,10 @@ ORB-SLAM2 能夠提取圖片的特徵並做 pose estimation。我們對提供的
 
 ## After Effects
 
+### Insert 3D text 
+<a href="https://www.youtube.com/watch?v=D9guWWGrZuA&feature=youtu.be" target="_blank"></a>
+<br>
+
 ### Insert 3D object by Cinema 4D Lite 
 <a href="https://youtu.be/5OtnqrWqJ1w" target="_blank"><img src="./Images/AE-OBJ.png" alt="Power" width="480" height="360" border="10"/></a>
 <br>
