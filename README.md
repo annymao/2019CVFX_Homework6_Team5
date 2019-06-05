@@ -27,8 +27,12 @@ ORB-SLAM2 能夠提取圖片的特徵並做 pose estimation。我們對提供的
 ## After Effects
 
 ### Insert 3D text 
-<a href="https://www.youtube.com/watch?v=D9guWWGrZuA&feature=youtu.be" target="_blank"></a>
+AE的camera tracker則會針對整個畫面進行追蹤，透過計算畫面的像素、明暗等特徵得到許多的追蹤點，之後我們可利用這些追蹤點來新增solid、null、text等物件。<br>
+<a href="https://www.youtube.com/watch?v=D9guWWGrZuA&feature=youtu.be" target="_blank"><img src="./Images/AE_3dtext.png" alt="Power" width="480" height="360" border="10"/></a>
 <br>
+這邊我們新增了兩個solid物件，分別放上羊走路以及人划船的影片，以及一個寫著”Bathroom ==>” 的text，text我們透過加深extrusion depth來加厚text，再打上spot light創造出3D字樣的效果，同時我們也需加入ambient light，才能看到另外兩個solid物件。rotation的部分，則是設keyframe來達成。<br>
+從影片中我們可以看到，相較於威力導演，AE插入的物件相對穩定，不會有浮動，雖然計算較花時間，但成果相當不錯。<br>
+
 
 ### Insert 3D object by Cinema 4D Lite 
 <a href="https://youtu.be/5OtnqrWqJ1w" target="_blank"><img src="./Images/AE-OBJ.png" alt="Power" width="480" height="360" border="10"/></a>
