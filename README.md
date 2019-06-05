@@ -27,7 +27,7 @@ ORB-SLAM2 能夠提取圖片的特徵並做 pose estimation。我們對提供的
 ## After Effects
 
 ### Insert 3D text 
-AE的camera tracker則會針對整個畫面進行追蹤，透過計算畫面的像素、明暗等特徵得到許多的追蹤點，之後我們可利用這些追蹤點來新增solid、null、text等物件。<br>
+AE的camera tracker則會針對整個畫面進行追蹤，透過計算畫面的像素、明暗等特徵得到許多的追蹤點，之後我們可利用這些追蹤點來新增solid、null、text等物件。
 <a href="https://www.youtube.com/watch?v=D9guWWGrZuA&feature=youtu.be" target="_blank"><img src="./Images/AE_3dtext.png" alt="Power" width="480" height="360" border="10"/></a>
 <br>
 這邊我們新增了兩個solid物件，分別放上羊走路以及人划船的影片，以及一個寫著”Bathroom ==>” 的text，text我們透過加深extrusion depth來加厚text，再打上spot light創造出3D字樣的效果，同時我們也需加入ambient light，才能看到另外兩個solid物件。rotation的部分，則是設keyframe來達成。<br>
@@ -46,12 +46,17 @@ AE的camera tracker則會針對整個畫面進行追蹤，透過計算畫面的�
     <img src="./Images/step4.png" alt="Power" width="360" height="270" border="10"/>
 </p>
 
-## Compare with Above Methods
-總體來說，相對於威力導演，ORB-SLAM 以及 AE 都是對影片的整個 frame 去計算出所有的追蹤點，再進行物件的插入，所以以準確度上來說比較高，但相對來說計算上就會比較耗時。而 ORB-SLAM2 在安裝上我們遇到了很多的問題，需要安裝許多東西，而且有版本上的限制，所以光是安裝就花了不少的時間。而威力導演如上面所提到，雖然比較快，但他的結果也比較不準確，並且能插入的東西也不如 AE 來的有彈性。<br>以下是一個簡單的比較表格<br>
+##iMovie
+<a href="https://www.youtube.com/watch?v=P5kd2dy1ThU&feature=youtu.be" target="_blank"><img src="./Images/imovie.png" alt="Power" width="480" height="360" border="10"/></a>
+<br>
+iMovie是mac內建的簡易影片剪輯軟體，提供基本的剪輯功能，它並沒有track motion的功能，因此這部分是在影格設keyframe，以手動的方式插入文字，呈現match moving的效果，我們可以看到結果相較起來也是陽春許多。<br>
 
-比較 | ORB-SLAM2 |威力導演           |  After Effect CC
-:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:
-安裝難易度  | 非常難 | 簡單（註冊後可得 30 天免費版本，學校有校園授權軟體） |  普通（試用版 7 天，永久的要錢）
-操作難易度  | 非常難 | 簡單 |  簡單
-追蹤準確度  | 高 | 低 |  高
-速度  | 慢 | 快 |  慢
+## Compare with Above Methods
+總體來說，相對於威力導演，ORB-SLAM 以及 AE 都是對影片的整個 frame 去計算出所有的追蹤點，再進行物件的插入，所以以準確度上來說比較高，但相對來說計算上就會比較耗時。而 ORB-SLAM2 在安裝上我們遇到了很多的問題，需要安裝許多東西，而且有版本上的限制，所以光是安裝就花了不少的時間。而威力導演如上面所提到，雖然比較快，但他的結果也比較不準確，並且能插入的東西也不如 AE 來的有彈性。iMovie由於是完全手動來呈現match moving效果，在操作上是非常直觀簡單，但結果相對陽春，比不上前面三種方法。<br>以下是一個簡單的比較表格<br>
+
+比較 | ORB-SLAM2 |威力導演           |  After Effect CC  | iMovie
+:-------------------------:|:-------------------------:|:-------------------------:|:-------------------------:|:-------------:|
+安裝難易度  | 非常難 | 簡單（註冊後可得 30 天免費版本，學校有校園授權軟體） |  普通（試用版 7 天，永久的要錢）  | 非常簡單（mac內建）
+操作難易度  | 非常難 | 簡單 |  簡單 | 非常簡單
+追蹤準確度  | 高 | 低 |  高  ｜ 低
+速度  | 慢 | 快 |  慢 ｜快
