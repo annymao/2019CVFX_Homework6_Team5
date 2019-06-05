@@ -46,7 +46,7 @@ AE的camera tracker則會針對整個畫面進行追蹤，透過計算畫面的�
     <img src="./Images/step4.png" alt="Power" width="360" height="270" border="10"/>
 </p>
 
-##iMovie
+### iMovie
 <a href="https://www.youtube.com/watch?v=P5kd2dy1ThU&feature=youtu.be" target="_blank"><img src="./Images/imovie.png" alt="Power" width="480" height="360" border="10"/></a>
 <br>
 iMovie是mac內建的簡易影片剪輯軟體，提供基本的剪輯功能，它並沒有track motion的功能，因此這部分是在影格設keyframe，以手動的方式插入文字，呈現match moving的效果，我們可以看到結果相較起來也是陽春許多。<br>
@@ -59,4 +59,4 @@ iMovie是mac內建的簡易影片剪輯軟體，提供基本的剪輯功能，�
 安裝難易度  | 非常難 | 簡單（註冊後可得 30 天免費版本，學校有校園授權軟體） |  普通（試用版 7 天，永久的要錢）  | 非常簡單（mac內建）
 操作難易度  | 非常難 | 簡單 |  簡單 | 非常簡單
 追蹤準確度  | 高 | 低 |  高  ｜ 低
-速度  | 慢 | 快 |  慢 ｜快
+速度  | 慢 | 快 |  慢 ｜ 快
